@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content%}
+<form action='/items/{{item.id}}', method="POST" class='form'></id>
+    <div class='form_row'>
+        <label for='name'>Name:</label>
+        <input type ='text' id='name' name='name' value ="{{item.name}}" required autofocus>
+    </div>
+    <div class='form_row'>
+        <label for='type'>Type:</label>
+        <input type ='text' id='type' name='type' value="{{item.type}}" required autofocus>
+    </div>
+    <div class='form_row'>
+        <label for='description'>Description:</label>
+        <input type='text' id='description' name='description' value="{{item.description}}" required autofocus>
+    </div>
+    <div class='form_row'>
+        <label for='quantity'>Quantity:</label>
+        <input type='number' id='quantity' name='quantity' value="{{item.quantity}}" required autofocus>
+    </div>
+    <div class='form_row'>
+        <label for='cost'>Cost:</label>
+        <input type='number' id='cost' name='cost' value="{{item.quantity}}" required autofocus>
+    </div>
+    <div class='form_row'>
+        <label for='price'>Price:</label>
+        <input type='number' id='price' name='price' value="{{item.price}}" required autofocus>
+    </div>
+    <div class='form_row'>
+        <label for='alchemist'>Alchemist:</label>
+        <select id='alchemist' name='alchemist'>
+        {% for alchemist in alchemists%}
+            {% if alchemist.status == 'active' %}
+                <option value="{{alchemist.id}}">{{alchemist.name}}</option>
+            {% endif %}
+        {% endfor %}
+        </select>
+    </div>
+    <div class='form_row'>
+        <button type="submit">Update</button>
+    </div>
+</form>
+{% endblock %}

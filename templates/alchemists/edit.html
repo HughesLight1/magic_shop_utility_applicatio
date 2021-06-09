@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content%}
+    <form action='/alchemists/{{alchemist.id}}', method="POST"></id>
+        <div class='form_row'>
+            <label for='name'>Name:</label>
+            <input type ='text' id='name' name='name' value="{{alchemist.name}}" required autofocus>
+        </div>
+        <div class='form_row'>
+            <label for='email'>Email:</label>
+            <input type='text' id='email' name='email' value='{{alchemist.email}}' required autofocus>
+        </div>
+        <div class='flag'>
+            <input type='checkbox' id='status' name='status' value='active' {% if alchemist.status == 'active'%} checked {% endif %} autofocus>
+            <label for='status'>Active</label>
+        </div>
+        <div class='form_row'>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+{% endblock %}

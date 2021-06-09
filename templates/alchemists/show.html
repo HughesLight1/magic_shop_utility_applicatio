@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content%}
+    <section>
+        <p>{{alchemist.detail()}}</p>
+    </section>
+    <article>
+        {% for item in items %}
+        <section class = 'inventory_item'>
+           <div class='item_top'>
+              <a href="/items/{{item.id}}">
+                 <img src='https://cdn1.iconfinder.com/data/icons/medieval-9/200/mage_magic_spell_staff_witch_wizard-512.png'>
+              </a>
+              <div class='name_by_alchemist'>
+                 <p>{{item.name}}</p>
+                 <p>by {{item.alchemist.name}}</p>
+              </div>
+           </div>
+           <p>Type:{{item.type}}</p>
+           <p class='description'>{{item.description}}</p>
+           <p>Cost: {{item.cost}}</p>
+           <p>Price: {{item.price}}</p>
+           <p>Total: {{item.calculate_total()}}</p>
+           <div class='quantity'>
+              <p>Quantity: {{item.quantity}}</p>
+              {% if item.low_stock() == True %}
+              <p class='low_stock'>low stock</p>
+              {% endif %}
+              {% if item.out_of_stock() == True %}
+              <p class='out_of_stock'>out of stock</p>
+              {% endif %}
+           </div>
+           <div class='buttons'>
+              <a href="/items/{{item.id}}/edit" class="material-icons purple">edit</a>
+              <button class="material-icons green">add</button>
+           </div>
+        </section>
+     {% endfor%}
+     </article>
+{% endblock %}

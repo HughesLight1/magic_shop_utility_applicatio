@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content%}
+<div id='single'>
+    <section class = 'single_item'>
+    <div class='item_top'>
+       <a href="/items/{{item.id}}" class ='img_link'>
+          <img src='https://vignette.wikia.nocookie.net/age-of-ishtaria/images/0/0f/Grimoire_III_icon.png/revision/latest?cb=20150211025441'>
+       </a>
+       <div class='name_by_alchemist'>
+          <p>{{item.name}}</p>
+          <a href='alchemists/{{item.alchemist.id}}'>by {{item.alchemist.name}}</a>
+       </div>
+    </div>
+    <p><b>Type:</b> {{item.type}}</p>
+    <p class='description'>{{alchemist.description}}</p>
+    <div class='cost_price'>
+       <p><b>Cost:</b> £{{item.cost}}</p>
+       <p><b>Price:</b> £{{item.price}}</p>
+    </div>
+    <p><b>Total:</b> £ {{item.calculate_total()}}</p>
+    <div class='quantity'>
+       <p><b>Quantity:</b> {{item.quantity}}</p>
+       {% if item.low_stock() == True %}
+       <p class='low_stock'>low stock</p>
+       {% endif %}
+       {% if item.out_of_stock() == True %}
+       <p class='out_of_stock'>out of stock</p>
+       {% endif %}
+    </div>
+    <div class='buttons'>
+       <a href="/items/{{item.id}}/edit" class="material-icons purple">edit</a>
+       <button class="material-icons green">add</button>
+    </div>
+    </section>
+</div>
+{% endblock %}

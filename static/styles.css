@@ -1,0 +1,396 @@
+body {
+    background-color: rgb(237, 170, 231);
+    font-family: 'Work Sans', sans-serif;
+    font-size: large;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0e53a7; ;
+}
+
+section {
+    margin-left: 20px ;
+    margin-bottom: 0px;
+    text-align: left;
+}
+input {
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+form {
+    margin-left: 50px;
+    text-align: left;
+}
+
+select {
+    padding: 6px;
+    border-radius: 10px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+button {
+    font-weight: 900;
+    border: solid;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgb(187, 8, 236);
+}
+/* Header styles */
+header {
+    display: flex;
+}
+
+.logo {
+    height: 50px;
+    width: 60px;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+/* Search and filter */
+
+#search_filter{
+    display: flex;
+    align-items: center;
+}
+
+#search_filter select{
+    max-height: 2.5em;
+}
+
+section > label {
+    margin: 5px;
+}
+
+section > input {
+    padding: 6px;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+/* Navigation */
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+nav > ul > li {
+    list-style: none;
+    margin: 5px;   
+}
+
+/* Inventory Add New/Filter */
+#add_filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-top: 15px;
+}
+
+#add_filter p{
+    font-weight: 900;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+#add_filter a {
+    font-weight: 900;
+    border: solid;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgb(12, 182, 171);
+    height: fit-content;
+    margin-right: 5px;
+}
+
+#filter {
+    display: flex;
+}
+
+#new_product {
+    font-weight: 900;
+    border: solid;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: rgb(255, 0, 0);
+    height: fit-content;
+}
+
+/* Inentory list and items */
+.inventory_list > article{
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(33, 38, 43);
+    margin-top: 50px;
+    justify-content: center;
+    
+}
+
+.inventory_list{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99%;
+}
+.product_top{
+    display: flex;
+}
+.inventory_item {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgb(20, 81, 134);
+    padding: 15px;
+    flex-basis: 25%;
+    margin-bottom: 20px;
+}
+
+.inventory_item img {
+    height: 50px;
+    width: 50px;
+}
+.inventory_item p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.description{
+    font-style: italic;
+    font-size: medium;
+}
+.name_by_alchemist p{
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.name_by_alchemist a {
+    margin-top: 0px;
+    margin-left: 5px;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.img_link:hover {
+    border: solid;
+    border-width: 1px;
+}
+
+.cost_price{
+    display: flex;
+}
+
+.cost_price p{
+margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
+#single{
+    display:flex;
+    justify-content: center;
+}
+
+.single_item{
+    width: fit-content;
+    margin-top: 1.5em;
+}
+
+.single_item img{
+    height: 100px;
+    width: 100px;
+}
+
+.single_item p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+form > div {
+    margin: 2%;
+}
+
+form > button {
+    padding: 5px;
+    margin: 2%; 
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+body > section >img {
+    height: 50px;
+    width: 50px;
+}
+
+.material-icons.red{ color: #f2ff00; }
+.material-icons.green{ color: #346832; }
+.material-icons.orange{ color: #0e0ea7; }
+
+.material-icons {
+    border: solid;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgb(28, 4, 238);
+}
+
+#Alchemist_list{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.Alchemist_list {
+    display: flex;
+    align-items: center;
+
+}
+
+._list h3{
+    flex: 1;
+  }
+
+  .alchemist_list p:first-of-type {
+      flex: 2;
+  }
+  .alchemist_list p {
+      flex: 3;
+  }
+  .alchemist_list div {
+      flex: 4;
+  }
+
+.quantity {
+    display: flex;
+    flex-direction: row;
+}
+
+.quantity p{
+    margin-right: 5px;
+}
+
+.low_stock{
+    color: #c77a21;
+}
+
+.out_of_stock{
+   color: #a02f0d;
+}
+
+#add_new_alchemist {
+    font-weight: 900;
+    border: solid;
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgb(236, 221, 193);
+    height: fit-content;
+}
+
+.form_row {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5em;
+}
+
+.form_row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+    font-weight: 900;
+  }
+.form_row > input, .form_row select {
+    flex: 2;
+    padding: .5em;
+  }
+
+.form_row button {
+    flex: 2;
+    padding: .5em; 
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 900;
+    font-size: medium;
+}
+
+.flag {
+ text-align: center;
+}
+
+
+@media only screen and (max-width: 670px){
+    article {
+        flex-direction: column;
+    }
+
+    #search_filter{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #alchemist_list section {
+        display: flex;
+        flex-direction: column;
+        align-items: middle;
+    }
+
+    #add_new_alchemist {
+    align-items: flex-start; 
+    }
+
+    #add_filter{
+        display: flex;
+        flex-direction: column;
+        align-items: middle;
+    }
+
+    #filter {
+        display: flex;
+        flex-direction: column;
+        align-items: middle;
+    }
+
+    .inventory_item {
+     margin: 0;
+    }
+
+    .form, form {
+        margin-left: 0;
+    }
+
+    .alchemist_list {
+        margin-left: 0px;
+    }
+}
+  

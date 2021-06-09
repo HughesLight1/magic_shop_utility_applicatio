@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Darklord Goods</title>
+</head>
+<body>
+    <header>
+        <img src ='https://www.logolynx.com/images/logolynx/15/15fcd7393404ad4ebdb5f918128f7b19.png' class = 'logo' >
+        <h1>Darklord Goods</h1>
+    </header>
+        <section id='search_filter'>
+            <input type="text" placeholder="Search Item Inventory">
+            <label for="filter">Filter</label>
+        <select name="filter" id="filter">
+            <option value="alchemist">by Alchemist</option>
+            <option value="collection">by Collection</option>
+            <option value="kind">by Kind</option>
+        </select>
+        </section>
+    <nav>
+        <ul>
+            <li>Account</li>
+            <li>Inbox</li>
+            <li>Shop Front</li>
+            <li>Blog</li>
+            <li><a href='/'>Inventory</a></li>
+            <li><a href='/alchemists'>Alchemists</a></li>
+        </ul>
+    </nav>
+    {% block content%}
+
+    {% endblock %}
+</body>
+</html>

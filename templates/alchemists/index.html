@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content%}
+    <h2>Alchemists</h2>
+    <a href='/alchemists/new' id='add_new_alchemist'>Add New alchemist</a>
+    <div id='alchemist_list'>
+        {% for alchemist in alchemists%}
+        <section class='alchemists_list'>
+             <h3>{{alchemist.name}}</h3>
+             <p>{{alchemist.email}}</p>
+             <p>{{alchemist.status}}</p>
+             <div>
+                <a href='/alchemists/{{alchemist.id}}/edit' class="material-icons purple">edit</a>
+                <button class="material-icons green">add</button>
+            </div>
+         </section>
+        {% endfor%}
+    </div>
+{%endblock%}
