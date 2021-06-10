@@ -12,13 +12,14 @@ def save(alchemist):
 
 def select_all():
     alchemists =[]
+    Alchemist.info
     sql = "SELECT * from alchemists ORDER by id"
     results = run_sql(sql)
 
     for row in results:
-        alchemist  = Alchemist(row['name'], row['email'], row['status'], row['id'])
-        alchemists.append(alchemist)
-    return alchemist
+        alchemists  = Alchemist(row['name'], row['email'], row['status'], row['id'])
+        alchemists.append(Alchemist.info)
+    return Alchemist.info
 
 def select(id):
     alchemist = None
