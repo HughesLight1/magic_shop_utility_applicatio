@@ -28,7 +28,7 @@ def create_alchemist():
     name = request.form['name']
     email = request.form['email']
     status = 'active'
-    alchemist =Alchemist(name, email, status)
+    alchemist = Alchemist(name, email, status)
     alchemist_repository.save(alchemist)
     return redirect('/alchemists')
 

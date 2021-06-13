@@ -6,7 +6,7 @@ def save(alchemist):
     sql = "INSERT INTO alchemists (name, email, status) VALUES (%s, %s, %s) RETURNING *"
     values = [alchemist.name, alchemist.email, alchemist.status]
     results = run_sql(sql, values)
-    id = results[0]['id']
+    id = results #[0]['id'] took this out to see what happened June13@19:36
     alchemist.id =id
     return alchemist
 

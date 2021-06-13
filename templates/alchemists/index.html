@@ -3,7 +3,7 @@
     <h2>Alchemists</h2>
     <a href='/alchemists/new' id='add_new_alchemist'>Add New alchemist</a>
     <div id='alchemist_list'>
-        {% for alchemist in alchemists%}
+        {% for alchemist in Alchemist %}  #the for loop was alchemists  
         <section class='alchemists_list'>
              <h3>{{alchemist.name}}</h3>
              <p>{{alchemist.email}}</p>
