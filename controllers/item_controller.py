@@ -26,7 +26,7 @@ def item(id):
 @item_blueprint.route("/new")
 def new_item():
     alchemists = alchemist_repository.select_all
-    return render_template("/items/newhtml", alchemists=alchemists)
+    return render_template("/items/new.html", alchemists=alchemists)
 
 #CREATE
 #POST

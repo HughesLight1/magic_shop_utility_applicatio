@@ -12,11 +12,13 @@ alchemist_blueprint = Blueprint('alchemist', __name__)
 @alchemist_blueprint.route("/alchemists")
 def alchemists():
     alchemists = alchemist_repository.select_all()
+   
     return render_template('alchemists/index.html', alchemists=alchemists)
 
 # GET a life
 @alchemist_blueprint.route("/alchemists/new")
 def new():
+    print()
     return render_template("alchemists/new.html")
 
 
@@ -48,7 +50,7 @@ def edit_alchemist(id):
 def update_alchemist(id):
     name = request.form['name']
     email = request.form['email']
-    status = request,form.getlist('status')
+    status = request.form.getlist('status')
     print(status)
     if status == []:
         status = 'inactive'

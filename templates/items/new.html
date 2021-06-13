@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block content%}
+{% block content %}
     <form action='/new', method="POST" class='form'></id>
         <div class='form_row'>
             <label for='name'>Name:</label>
@@ -28,7 +28,7 @@
         <div class='form_row'>
             <label for='alchemist'>Alchemist:</label>
             <select id='alchemist' name='alchemist'>
-            {% for alchemist in alchemists%}
+            {% for alchemist in Alchemist %}
                 {% if alchemist.status == 'active' %}
                      <option value="{{alchemist.id}}">{{alchemist.name}}</option>
                 {% endif %}
