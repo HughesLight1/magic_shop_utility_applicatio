@@ -18,7 +18,7 @@ def select_all():
     for row in results:
         alchemist  = Alchemist(row['name'], row['email'], row['status'], row['id'])
         alchemists.append(alchemist)
-    return alchemist
+    return alchemists
 
 def select(id):
     alchemist = None
