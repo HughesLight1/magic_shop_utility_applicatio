@@ -14,7 +14,7 @@ app.register_blueprint(alchemist_blueprint)
 app.register_blueprint(item_blueprint)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=[ 'GET','POST'])
 def home():
     return redirect('/items')
 

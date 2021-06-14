@@ -27,10 +27,10 @@
         </div>
         <div class='form_row'>
             <label for='alchemist'>Alchemist:</label>
-            <select id='alchemist' name='alchemist'>
-            {% for alchemist in Alchemist %}
+            <select  name='alchemist' id= 'alchemist'>
+            {% for alchemist in alchemist %}
                 {% if alchemist.status == 'active' %}
-                     <option value="{{alchemist.id}}">{{alchemist.name}}</option>
+                <option value="{{alchemist.id}}">{{alchemist.name}}</option>  
                 {% endif %}
             {% endfor %}
             </select>

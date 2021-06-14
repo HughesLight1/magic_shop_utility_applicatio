@@ -24,7 +24,7 @@ def select(id):
     alchemist = None
     sql = "SELECT * FROM alchemists WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)[0]
+    result = run_sql(sql, values)[0] #took out zero list to see what happens and it returns a type error: list indicies must be integers or slices, not strings lol Python
 
     if result is not None:
         alchemist = Alchemist(result['name'], result['email'], result['status'], result['id'])
