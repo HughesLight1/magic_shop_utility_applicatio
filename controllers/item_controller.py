@@ -1,3 +1,4 @@
+from models.alchemist import Alchemist
 from flask import render_template, request, Blueprint, redirect
 from models.item import Item
 import repositories.item_repository as item_repository
@@ -30,7 +31,7 @@ def new_item():
 
 #CREATE
 #POST
-@item_blueprint.route("/new", methods = ['POST'])
+@item_blueprint.route("/new", methods = ['POST']) #added GET June14@02:41 but took back out
 def create_item():
     name = request.form['name']
     type = request.form['type']
@@ -38,8 +39,11 @@ def create_item():
     quantity = request.form['quantity']
     cost = request.form['cost']
     price = request.form['price']
-    alchemist_id = request.form['alchemist']
-    alchemist = alchemist_repository.select(alchemist_id)
+    #status =  'active' #this was added
+    #email = request.form['email'] #this was added
+    #id = request.form['id']
+    alchemist_id = request.form['alchemist'] #this is giving me the most trouble.BadRequestKeyError(key) which I think __getitem__ raises it.
+    alchemist = alchemist_repository.select(alchemist_id) #changed to item_repositoryJune14@02:05 was select(alchemistId)changed back @03:33
     item = Item(name, type, description, quantity, cost, price, alchemist)
     item_repository.save(item)
     return redirect('/')

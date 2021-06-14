@@ -9,9 +9,9 @@ def save(item):
     values =[item.name, item.type, item.description, item.quantity, item.cost, item.price, item.alchemist.id]
 
     results = run_sql(sql, values)
-    id = results[0]['id']
+    id = results [0]['id'] #took this out to see what would happen June14@02:02 added back in @02:04
     item.id = id
-    return item
+    return item 
 
 def select_all():
     items = []
@@ -36,7 +36,7 @@ def select_all_by_alchemist(alchemist_id):
 
          alchemist = alchemist_repository.select(row['alchemist_id'])
          item = Item(row['name'], row['type'], row['description'], row['quantity'], row['cost'], row['price'], alchemist, row['id'])
-         items.append(items)
+         items.append(item)
 
     return items
 
@@ -51,7 +51,7 @@ def select_all_by_type(type):
 
         alchemist = alchemist_repository.select(row['alchemist_id'])
         item = Item(row['name'], row['type'], row['description'], row['quantity'], row['cost'], row['price'], alchemist, row['id'])
-        items.append[item]
+        items.append(item)
 
     return item
 
@@ -71,15 +71,16 @@ def delete_all():
     run_sql(sql)
 
 def select_(id):
-    Item = None
+    item = None
     sql = "SELECT * FROM items WHERE id = %s"
     value =[id]
     result = run_sql(sql, value[0])
 
     if result is not None:
         alchemist = alchemist_repository.select(result['alchemist_id'])
-        item = Item(row['name'], row['type'], row['description'], row['quantity'], row['cost'], row['price'], alchemist, result['id'])
-    
+        #row error below in Item()June14@03:31
+        item = Item(result['name'], result['type'], result['description'], result['quantity'], result['cost'], result['price'], alchemist, result['id'])
+    #undefinedvariable row added results inside Item(result['name'] etc)
     return item
 
 def update(item):
